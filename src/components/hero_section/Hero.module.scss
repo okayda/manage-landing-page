@@ -1,0 +1,34 @@
+@import "../../scss/variables";
+
+.hero {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
+
+  margin: 0 auto;
+  max-width: $mobile-wide;
+
+  &__content {
+    text-align: center;
+    padding: 0 3rem;
+    order: 2;
+  }
+
+  &__title {
+    font-size: 3rem;
+    margin-bottom: 1.6rem;
+  }
+
+  &__description {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 2.4rem;
+  }
+
+  &__img {
+    order: 1;
+    max-width: 32rem;
+    margin: 0 auto;
+  }
+}

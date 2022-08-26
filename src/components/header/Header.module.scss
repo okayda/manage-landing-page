@@ -1,0 +1,42 @@
+@import "../../scss/variables";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+
+  margin: 0 auto;
+  max-width: $mobile-wide;
+
+  &__logo_link {
+    height: 2rem;
+  }
+
+  &__nav_container {
+    display: none;
+  }
+
+  &__nav_list {
+    display: flex;
+    gap: 2.4rem;
+    font-size: 1.5rem;
+    list-style: none;
+  }
+
+  &__nav_link:link,
+  &__nav_link:visited {
+    text-decoration: none;
+    color: #333;
+  }
+
+  &__menu {
+    background-color: transparent;
+    border: none;
+  }
+
+  &__menu img {
+    height: 2.2rem;
+    width: 2.6rem;
+  }
+}

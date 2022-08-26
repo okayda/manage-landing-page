@@ -1,0 +1,27 @@
+.hero {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
+  margin: 0 auto;
+  max-width: 375px;
+}
+.hero__content {
+  text-align: center;
+  padding: 0 3rem;
+  order: 2;
+}
+.hero__title {
+  font-size: 3rem;
+  margin-bottom: 1.6rem;
+}
+.hero__description {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+.hero__img {
+  order: 1;
+  max-width: 32rem;
+  margin: 0 auto;
+}

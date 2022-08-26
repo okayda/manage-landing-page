@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  margin: 0 auto;
+  max-width: 375px;
+}
+.header__logo_link {
+  height: 2rem;
+}
+.header__nav_container {
+  display: none;
+}
+.header__nav_list {
+  display: flex;
+  gap: 2.4rem;
+  font-size: 1.5rem;
+  list-style: none;
+}
+.header__nav_link:link, .header__nav_link:visited {
+  text-decoration: none;
+  color: #333;
+}
+.header__menu {
+  background-color: transparent;
+  border: none;
+}
+.header__menu img {
+  height: 2.2rem;
+  width: 2.6rem;
+}

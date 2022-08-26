@@ -1,5 +1,13 @@
+import Header from "./components/header/Header";
+import Hero from "./components/hero_section/Hero";
+
 function App() {
-  return <h1>Manage Landing Page</h1>;
+  return (
+    <>
+      <Header />
+      <Hero />
+    </>
+  );
 }
 
 export default App;
