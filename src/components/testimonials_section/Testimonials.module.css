@@ -1,0 +1,38 @@
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 4rem;
+  padding: 12rem 2rem;
+}
+.testimonials__img {
+  width: 7.5rem;
+  height: 7.5rem;
+}
+.testimonials__title {
+  font-size: 2.6rem;
+}
+.testimonials__content {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.6rem;
+}
+.testimonials__name {
+  font-size: 1.7rem;
+}
+.testimonials__description {
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+.testimonials__dots {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+}
+.testimonials__dot {
+  padding: 0.4rem;
+  border-radius: 50%;
+  border: 1px solid hsl(12deg, 88%, 59%);
+}

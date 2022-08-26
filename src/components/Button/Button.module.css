@@ -1,8 +1,8 @@
 .button {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   background-color: hsl(12deg, 88%, 59%);
   box-shadow: 0 0.8rem 0.8rem rgba(242, 95, 58, 0.5);
-  padding: 1rem 2rem;
+  padding: 1.4rem 2.2rem;
   border: none;
   color: hsl(0deg, 0%, 98%);
   border-radius: 100px;
