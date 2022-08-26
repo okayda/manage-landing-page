@@ -1,0 +1,57 @@
+@import "../../scss/variables";
+
+.steps {
+  max-width: 375px;
+  margin: 0 auto;
+
+  padding: 8rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4.4rem;
+  &__content {
+    text-align: center;
+    padding: 0 3rem;
+  }
+
+  &__title {
+    font-size: 2.6rem;
+    margin-bottom: 2.4rem;
+  }
+
+  &__description {
+    font-size: 1.5rem;
+  }
+
+  // ? Procedures List
+
+  &__procedure_list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  &__list_title {
+    background-color: $very-pale-red;
+    font-size: 1.7rem;
+    display: flex;
+    gap: 1.8rem;
+    align-items: center;
+    border-radius: 100px;
+    line-height: 1;
+    margin-bottom: 1.6rem;
+  }
+
+  &__number {
+    background-color: $bright-red;
+    color: $very-light-gray;
+    padding: 1.2rem 2rem;
+    border-radius: 100px;
+  }
+
+  &__list_description {
+    color: $dark-grayish-blue;
+    line-height: 1.6;
+    font-size: 1.5rem;
+  }
+}
