@@ -1,0 +1,20 @@
+@import "../../scss/variables";
+
+.cta {
+  text-align: center;
+  padding: 6.4rem 2rem;
+  background-color: $bright-red;
+
+  &__title {
+    font-weight: 500;
+    color: $very-light-gray;
+    padding: 0 5rem;
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+  }
+
+  button {
+    background-color: $very-light-gray;
+    color: $bright-red;
+  }
+}

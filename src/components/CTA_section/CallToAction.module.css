@@ -1,0 +1,16 @@
+.cta {
+  text-align: center;
+  padding: 6.4rem 2rem;
+  background-color: hsl(12deg, 88%, 59%);
+}
+.cta__title {
+  font-weight: 500;
+  color: hsl(0deg, 0%, 98%);
+  padding: 0 5rem;
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+}
+.cta button {
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(12deg, 88%, 59%);
+}
