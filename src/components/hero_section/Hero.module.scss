@@ -28,7 +28,8 @@
 
   &__img {
     order: 1;
-    max-width: 32rem;
+    // max-width: 32rem;
+    width: 100%;
     margin: 0 auto;
   }
 }

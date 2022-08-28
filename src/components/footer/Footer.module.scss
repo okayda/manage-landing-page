@@ -1,0 +1,92 @@
+@import "../../scss/variables";
+
+.footer {
+  background-color: $very-dark-blue;
+
+  &__box {
+    max-width: $mobile-wide;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    justify-items: center;
+    padding: 4rem 2rem;
+  }
+
+  &__form_container {
+    @media (max-width: 350px) {
+      justify-self: stretch;
+    }
+  }
+
+  &__form {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 22rem 1fr;
+    gap: 1rem;
+
+    input {
+      padding: 1rem 1.4rem;
+      border-radius: 100px;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    button {
+      padding: 1rem 2rem;
+      box-shadow: none;
+    }
+
+    @media (max-width: 350px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__icons_container {
+    width: 100%;
+  }
+
+  &__link_list,
+  &__link_icon {
+    list-style: none;
+  }
+
+  &__link_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.4rem;
+    row-gap: 1.4rem;
+    column-gap: 6rem;
+
+    @media (max-width: 350px) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  }
+
+  &__link_icon {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 3.2rem;
+    line-height: 1;
+  }
+
+  &__link_list a,
+  &__link_icon a {
+    color: $very-light-gray;
+  }
+
+  &__logo {
+    filter: $svg-very-light-gray;
+    line-height: 1;
+  }
+
+  &__copyright {
+    font-size: 1.3rem;
+    color: $dark-grayish-blue;
+  }
+}
