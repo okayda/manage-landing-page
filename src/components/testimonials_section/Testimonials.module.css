@@ -1,4 +1,6 @@
 .testimonials {
+  max-width: 375px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;

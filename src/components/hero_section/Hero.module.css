@@ -25,3 +25,18 @@
   width: 100%;
   margin: 0 auto;
 }
+@media (min-width: 700px) {
+  .hero {
+    max-width: 40rem;
+    gap: 2rem;
+  }
+  .hero__content {
+    padding: 0;
+  }
+  .hero__description {
+    font-size: 1.6rem;
+  }
+  .hero__img {
+    max-width: 37.5rem;
+  }
+}

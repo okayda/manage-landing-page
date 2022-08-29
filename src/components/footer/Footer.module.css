@@ -24,6 +24,7 @@
 .footer__form input {
   padding: 1rem 1.4rem;
   border-radius: 100px;
+  border: none;
 }
 .footer__form input:focus {
   outline: none;
@@ -37,6 +38,18 @@
     grid-template-columns: 1fr;
   }
 }
+.footer__list_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  font-size: 1.4rem;
+}
+@media (max-width: 350px) {
+  .footer__list_container {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+}
 .footer__icons_container {
   width: 100%;
 }
@@ -44,17 +57,14 @@
   list-style: none;
 }
 .footer__link_list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  font-size: 1.4rem;
-  row-gap: 1.4rem;
-  -moz-column-gap: 6rem;
-       column-gap: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
 }
 @media (max-width: 350px) {
   .footer__link_list {
-    grid-template-columns: 1fr;
-    justify-items: center;
+    gap: 1.6rem;
+    align-items: center;
   }
 }
 .footer__link_icon {

@@ -1,6 +1,9 @@
 @import "../../scss/variables";
 
 .testimonials {
+  max-width: $mobile-wide;
+  margin: 0 auto;
+
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;

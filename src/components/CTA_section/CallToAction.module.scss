@@ -1,9 +1,15 @@
 @import "../../scss/variables";
 
 .cta {
-  text-align: center;
-  padding: 6.4rem 2rem;
   background-color: $bright-red;
+
+  .cta__box {
+    max-width: 330px;
+    margin: 0 auto;
+
+    text-align: center;
+    padding: 6.4rem 2rem;
+  }
 
   &__title {
     font-weight: 500;

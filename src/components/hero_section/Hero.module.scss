@@ -28,8 +28,23 @@
 
   &__img {
     order: 1;
-    // max-width: 32rem;
     width: 100%;
     margin: 0 auto;
+  }
+
+  @media (min-width: 700px) {
+    max-width: 40rem;
+    gap: 2rem;
+    &__content {
+      padding: 0;
+    }
+
+    &__description {
+      font-size: 1.6rem;
+    }
+
+    &__img {
+      max-width: 37.5rem;
+    }
   }
 }

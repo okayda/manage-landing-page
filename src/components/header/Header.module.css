@@ -30,3 +30,17 @@
   height: 2.2rem;
   width: 2.6rem;
 }
+@media (min-width: 700px) {
+  .header {
+    max-width: 120rem;
+  }
+  .header__nav_container {
+    display: block;
+  }
+  .header__nav_list {
+    font-size: 1.6rem;
+  }
+  .header__menu {
+    display: none;
+  }
+}

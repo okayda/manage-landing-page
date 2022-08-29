@@ -1,7 +1,7 @@
 @import "../../scss/variables";
 
 .steps {
-  max-width: 375px;
+  max-width: 37.5rem;
   margin: 0 auto;
 
   padding: 8rem 2rem;
@@ -53,5 +53,36 @@
     color: $dark-grayish-blue;
     line-height: 1.6;
     font-size: 1.5rem;
+  }
+
+  @media (min-width: 700px) {
+    max-width: 65rem;
+    gap: 6rem;
+
+    &__list_title {
+      font-size: 1.8rem;
+    }
+
+    &__description {
+      font-size: 1.6rem;
+      padding: 0 6rem;
+    }
+
+    &__list_description {
+      font-size: 1.6rem;
+    }
+
+    &__procedure_list {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      li {
+        max-width: 375px;
+      }
+
+      li:nth-child(even) {
+        justify-self: end;
+      }
+    }
   }
 }

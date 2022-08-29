@@ -1,7 +1,11 @@
 import style from "./Footer.module.css";
 
 import Button from "../Button/Button";
-import FooterLinks from "./FooterLinks";
+
+import FooterLinksList from "./FooterLinksList";
+import LinkListOne from "./LinkListOne";
+import LinkListTwo from "./LinkListTwo";
+
 import FooterLinksIcons from "./FooterLinksIcons";
 import logo from "../../images/logo.svg";
 
@@ -16,8 +20,14 @@ const Footer = function () {
           </form>
         </div>
 
-        <div>
-          <FooterLinks footer__link_list={style.footer__link_list} />
+        <div className={style.footer__list_container}>
+          <FooterLinksList footer__link_list={style.footer__link_list}>
+            <LinkListOne />
+          </FooterLinksList>
+
+          <FooterLinksList footer__link_list={style.footer__link_list}>
+            <LinkListTwo />
+          </FooterLinksList>
         </div>
 
         <div className={style.footer__icons_container}>

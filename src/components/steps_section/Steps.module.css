@@ -1,5 +1,5 @@
 .steps {
-  max-width: 375px;
+  max-width: 37.5rem;
   margin: 0 auto;
   padding: 8rem 2rem;
   display: grid;
@@ -43,4 +43,30 @@
   color: hsl(227deg, 12%, 61%);
   line-height: 1.6;
   font-size: 1.5rem;
+}
+@media (min-width: 700px) {
+  .steps {
+    max-width: 65rem;
+    gap: 6rem;
+  }
+  .steps__list_title {
+    font-size: 1.8rem;
+  }
+  .steps__description {
+    font-size: 1.6rem;
+    padding: 0 6rem;
+  }
+  .steps__list_description {
+    font-size: 1.6rem;
+  }
+  .steps__procedure_list {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .steps__procedure_list li {
+    max-width: 375px;
+  }
+  .steps__procedure_list li:nth-child(even) {
+    justify-self: end;
+  }
 }
