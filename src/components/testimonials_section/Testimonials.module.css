@@ -28,13 +28,3 @@
   font-size: 1.5rem;
   line-height: 1.7;
 }
-.testimonials__dots {
-  display: flex;
-  gap: 0.4rem;
-  justify-content: center;
-}
-.testimonials__dot {
-  padding: 0.4rem;
-  border-radius: 50%;
-  border: 1px solid hsl(12deg, 88%, 59%);
-}
