@@ -1,17 +1,47 @@
+import { useState, useEffect } from "react";
+import ReactDOM from "react-dom";
 import style from "./Header.module.css";
 
 import logo from "../../images/logo.svg";
 import menu from "../../images/icon-hamburger.svg";
-
+import close from "../../images/icon-close.svg";
+import Overlay from "../overlay/Overlay";
+import NavMobile from "../nav_mobile/NavMobile";
 import DesktopNavList from "./DesktopNavList";
 
 const Nav = function () {
+  const [activeNav, setNav] = useState(false);
+
+  const closeNavMobile = function () {
+    setNav(true);
+    document.body.classList.add("active-nav");
+  };
+
+  const menuNavMobile = function () {
+    setNav(false);
+    document.body.classList.remove("active-nav");
+  };
+
+  const navMenuToggle = function () {
+    if (activeNav)
+      return (
+        <button className={style.header__menu} onClick={menuNavMobile}>
+          <img src={close} />
+        </button>
+      );
+
+    return (
+      <button className={style.header__menu} onClick={closeNavMobile}>
+        <img src={menu} />
+      </button>
+    );
+  };
+
   return (
     <header className={style.header}>
       <a href={""} className={style.header__logo_link}>
         <img src={logo} alt="Logo" />
       </a>
-
       <nav className={style.header__nav_container}>
         <DesktopNavList
           header__nav_list={style.header__nav_list}
@@ -19,9 +49,18 @@ const Nav = function () {
         />
       </nav>
 
-      <button className={style.header__menu}>
-        <img src={menu} />
-      </button>
+      {navMenuToggle()}
+
+      {activeNav &&
+        ReactDOM.createPortal(
+          <Overlay />,
+          document.querySelector(".overlay-container")
+        )}
+      {activeNav &&
+        ReactDOM.createPortal(
+          <NavMobile />,
+          document.querySelector(".nav_mobile-container")
+        )}
     </header>
   );
 };

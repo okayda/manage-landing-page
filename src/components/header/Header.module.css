@@ -25,10 +25,11 @@
 .header__menu {
   background-color: transparent;
   border: none;
+  line-height: 1;
 }
 .header__menu img {
-  height: 2.2rem;
-  width: 2.6rem;
+  height: 2.4rem;
+  width: 2.4rem;
 }
 @media (min-width: 700px) {
   .header {
