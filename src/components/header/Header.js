@@ -1,15 +1,19 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ReactDOM from "react-dom";
 import style from "./Header.module.css";
 
 import logo from "../../images/logo.svg";
 import menu from "../../images/icon-hamburger.svg";
 import close from "../../images/icon-close.svg";
+
 import Overlay from "../overlay/Overlay";
 import NavMobile from "../nav_mobile/NavMobile";
+
 import DesktopNavList from "./DesktopNavList";
 
 const Nav = function () {
+  const url = "";
+
   const [activeNav, setNav] = useState(false);
 
   const closeNavMobile = function () {
@@ -26,20 +30,20 @@ const Nav = function () {
     if (activeNav)
       return (
         <button className={style.header__menu} onClick={menuNavMobile}>
-          <img src={close} />
+          <img src={close} alt="" />
         </button>
       );
 
     return (
       <button className={style.header__menu} onClick={closeNavMobile}>
-        <img src={menu} />
+        <img src={menu} alt="" />
       </button>
     );
   };
 
   return (
-    <header className={style.header}>
-      <a href={""} className={style.header__logo_link}>
+    <div className={style.header}>
+      <a href={url} className={style.header__logo_link}>
         <img src={logo} alt="Logo" />
       </a>
       <nav className={style.header__nav_container}>
@@ -61,7 +65,7 @@ const Nav = function () {
           <NavMobile />,
           document.querySelector(".nav_mobile-container")
         )}
-    </header>
+    </div>
   );
 };
 

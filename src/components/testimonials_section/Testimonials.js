@@ -15,7 +15,7 @@ const Testimonials = function () {
       <h2 className={style.testimonials__title}>What they've said</h2>
       <Swiper
         grabCursor={true}
-        slidesPerView={1}
+        slidesPerView={2}
         spaceBetween={30}
         pagination={{
           clickable: true,

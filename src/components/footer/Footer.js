@@ -11,7 +11,7 @@ import logo from "../../images/logo.svg";
 
 const Footer = function () {
   return (
-    <footer className={style.footer}>
+    <div className={style.footer}>
       <div className={style.footer__box}>
         <div className={style.footer__form_container}>
           <form className={style.footer__form}>
@@ -34,7 +34,7 @@ const Footer = function () {
           <FooterLinksIcons footer__link_icon={style.footer__link_icon} />
         </div>
 
-        <a href={""} className={style.footer__logo}>
+        <a href="#/" className={style.footer__logo}>
           <img src={logo} alt="Logo" />
         </a>
 
@@ -42,7 +42,7 @@ const Footer = function () {
           Copyright 2022. All Rights Reserved
         </p>
       </div>
-    </footer>
+    </div>
   );
 };
 

@@ -28,3 +28,9 @@
   font-size: 1.5rem;
   line-height: 1.7;
 }
+
+@media (min-width: 700px) {
+  .testimonials {
+    max-width: 700px;
+  }
+}
