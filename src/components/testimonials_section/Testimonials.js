@@ -1,3 +1,5 @@
+import { useState } from "react";
+import React from "react";
 // Swiper Files
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
@@ -10,12 +12,20 @@ import style from "./Testimonials.module.css";
 import Button from "../Button/Button";
 
 const Testimonials = function () {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  React.useEffect(() => {
+    window.addEventListener("resize", () => {
+      setWidth(window.innerWidth);
+    });
+  });
+
   return (
     <section className={style.testimonials}>
       <h2 className={style.testimonials__title}>What they've said</h2>
       <Swiper
         grabCursor={true}
-        slidesPerView={2}
+        slidesPerView={width >= 700 ? 2 : 1}
         spaceBetween={30}
         pagination={{
           clickable: true,

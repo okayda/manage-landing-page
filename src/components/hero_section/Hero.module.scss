@@ -47,4 +47,32 @@
       max-width: 37.5rem;
     }
   }
+
+  @media (min-width: 1200px) {
+    padding: 6rem 2rem;
+    max-width: 120rem;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+
+    &__content {
+      text-align: left;
+      order: 1;
+    }
+
+    &__title {
+      font-size: 4.6rem;
+      width: 90%;
+    }
+
+    &__description {
+      width: 60%;
+    }
+
+    &__img {
+      max-width: 50rem;
+      justify-self: end;
+      margin: 0;
+      order: 2;
+    }
+  }
 }

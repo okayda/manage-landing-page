@@ -40,3 +40,28 @@
     max-width: 37.5rem;
   }
 }
+@media (min-width: 1200px) {
+  .hero {
+    padding: 6rem 2rem;
+    max-width: 120rem;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero__content {
+    text-align: left;
+    order: 1;
+  }
+  .hero__title {
+    font-size: 4.6rem;
+    width: 90%;
+  }
+  .hero__description {
+    width: 60%;
+  }
+  .hero__img {
+    max-width: 50rem;
+    justify-self: end;
+    margin: 0;
+    order: 2;
+  }
+}

@@ -35,4 +35,8 @@
     font-size: 1.5rem;
     line-height: 1.7;
   }
+
+  @media (min-width: 700px) {
+    max-width: 750px;
+  }
 }
