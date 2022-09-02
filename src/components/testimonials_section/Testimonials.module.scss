@@ -37,6 +37,10 @@
   }
 
   @media (min-width: 700px) {
-    max-width: 750px;
+    max-width: 75rem;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 110rem;
   }
 }

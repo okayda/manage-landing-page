@@ -13,7 +13,7 @@ import Button from "../Button/Button";
 
 const Testimonials = function () {
   const [width, setWidth] = useState(window.innerWidth);
-
+  console.log(width);
   React.useEffect(() => {
     window.addEventListener("resize", () => {
       setWidth(window.innerWidth);
@@ -25,7 +25,7 @@ const Testimonials = function () {
       <h2 className={style.testimonials__title}>What they've said</h2>
       <Swiper
         grabCursor={true}
-        slidesPerView={width >= 700 ? 2 : 1}
+        slidesPerView={width >= 1200 ? 3 : width >= 700 ? 2 : 1}
         spaceBetween={30}
         pagination={{
           clickable: true,

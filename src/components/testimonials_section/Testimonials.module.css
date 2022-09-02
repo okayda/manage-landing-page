@@ -30,6 +30,11 @@
 }
 @media (min-width: 700px) {
   .testimonials {
-    max-width: 750px;
+    max-width: 75rem;
+  }
+}
+@media (min-width: 1200px) {
+  .testimonials {
+    max-width: 110rem;
   }
 }
