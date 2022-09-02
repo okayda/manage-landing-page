@@ -1,7 +1,9 @@
 .hero {
-  padding: 2rem;
+  height: 80vh;
+  padding-bottom: 20vh;
   display: grid;
   grid-template-columns: 1fr;
+  align-items: center;
   gap: 1.4rem;
   margin: 0 auto;
   max-width: 375px;
@@ -42,9 +44,7 @@
 }
 @media (min-width: 1200px) {
   .hero {
-    padding: 6rem 2rem;
     max-width: 120rem;
-    align-items: center;
     grid-template-columns: 1fr 1fr;
   }
   .hero__content {

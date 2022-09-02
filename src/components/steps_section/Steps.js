@@ -15,6 +15,7 @@ const Steps = function () {
       <div className={style.steps__procedures}>
         <ProcedureList
           steps__procedure_list={style.steps__procedure_list}
+          steps__procedure_title={style.steps__procedure_title}
           steps__list_title={style.steps__list_title}
           steps__number={style.steps__number}
           steps__list_description={style.steps__list_description}

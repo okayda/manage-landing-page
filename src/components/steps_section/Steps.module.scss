@@ -4,7 +4,7 @@
   max-width: 37.5rem;
   margin: 0 auto;
 
-  padding: 8rem 2rem;
+  padding: 0 2rem 8rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 4.4rem;
@@ -22,8 +22,6 @@
     font-size: 1.5rem;
   }
 
-  // ? Procedures List
-
   &__procedure_list {
     list-style: none;
     display: flex;
@@ -31,22 +29,34 @@
     gap: 5rem;
   }
 
+  &__procedure_title {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
   &__list_title {
     background-color: $very-pale-red;
-    font-size: 1.7rem;
-    display: flex;
-    gap: 1.8rem;
-    align-items: center;
     border-radius: 100px;
     line-height: 1;
-    margin-bottom: 1.6rem;
+    font-size: 1.7rem;
+    padding-right: 1.6rem;
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
   }
 
   &__number {
+    padding: 1.2rem 2.2rem;
+    font-weight: bold;
+    display: inline-block;
     background-color: $bright-red;
     color: $very-light-gray;
-    padding: 1.2rem 2rem;
     border-radius: 100px;
+  }
+
+  &__heading_title {
+    display: inline-block;
+    padding: 1.2rem 0;
   }
 
   &__list_description {
@@ -58,10 +68,6 @@
   @media (min-width: 700px) {
     max-width: 65rem;
     gap: 6rem;
-
-    &__list_title {
-      font-size: 1.8rem;
-    }
 
     &__description {
       font-size: 1.6rem;
@@ -77,11 +83,55 @@
       grid-template-columns: 1fr;
 
       li {
-        max-width: 375px;
+        max-width: 37.5rem;
       }
 
       li:nth-child(even) {
         justify-self: end;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 120rem;
+    grid-template-columns: 1fr 1fr;
+
+    &__content {
+      text-align: left;
+      padding: 0;
+    }
+
+    &__title {
+      font-size: 4rem;
+    }
+
+    &__description {
+      width: 60%;
+      padding: 0;
+    }
+
+    &__procedures {
+      justify-self: end;
+      width: 80%;
+    }
+
+    &__list_title {
+      background-color: transparent;
+    }
+
+    &__number {
+      font-size: 1.7rem;
+      position: absolute;
+      left: -20%;
+    }
+
+    &__procedure_list {
+      li {
+        max-width: 47.5rem;
+      }
+
+      li:nth-child(even) {
+        justify-self: auto;
       }
     }
   }

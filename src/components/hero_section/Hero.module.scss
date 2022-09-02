@@ -1,9 +1,11 @@
 @import "../../scss/variables";
 
 .hero {
-  padding: 2rem;
+  height: 80vh;
+  padding-bottom: 20vh;
   display: grid;
   grid-template-columns: 1fr;
+  align-items: center;
   gap: 1.4rem;
 
   margin: 0 auto;
@@ -49,9 +51,7 @@
   }
 
   @media (min-width: 1200px) {
-    padding: 6rem 2rem;
     max-width: 120rem;
-    align-items: center;
     grid-template-columns: 1fr 1fr;
 
     &__content {
