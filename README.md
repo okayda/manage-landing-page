@@ -17,7 +17,7 @@ Users should be able to:
 
 ## Links
 
-- [Solution URL](https://github.com/okayda/react-manage-landing-page.git)
+- [Solution URL](https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5)
 - [Live Site URL](https://jhon-okayda-manage-landing-page.netlify.app/)
 
 ## Built with
