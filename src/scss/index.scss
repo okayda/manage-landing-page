@@ -8,7 +8,6 @@ html {
 html,
 body {
   overflow-x: hidden;
-  height: 100%;
 }
 
 *,
@@ -30,5 +29,6 @@ body {
 }
 
 .active-nav {
-  overflow-y: hidden !important;
+  overflow-y: hidden;
+  height: 100vh;
 }
