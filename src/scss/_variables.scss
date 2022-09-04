@@ -11,5 +11,9 @@ $very-light-gray: hsl(0, 0%, 98%);
 $svg-very-light-gray: invert(98%) sepia(3%) saturate(10%) hue-rotate(356deg)
   brightness(110%) contrast(96%);
 
-$desktop-wide: 1200px;
-$mobile-wide: 375px;
+// Responsiveness
+$desktop-wide: 75em; // min-width
+$s-desktop-wide: 62.5em; // max-width
+$tablet-wide: 43.75em; // min-width
+$mobile-wide: 23.4em; // min-width
+$s-mobile-wide: 21.8em; // max-width

@@ -1,35 +1,62 @@
 @import "../../scss/variables";
+@import "../../scss/mixins";
 
 .cta {
   background-color: $bright-red;
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
 
   &__box {
+    @include widthCenter(33rem);
+
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
     text-align: center;
-
-    max-width: 330px;
-    margin: 0 auto;
-
     padding: 6.4rem 2rem;
   }
 
   &__title {
     font-weight: 500;
     color: $very-light-gray;
-    padding: 0 5rem;
     font-size: 2.8rem;
     margin-bottom: 2rem;
   }
 
-  button {
+  &__button {
     background-color: $very-light-gray;
     color: $bright-red;
   }
 
-  @media (min-width: 700px) {
+  &__button:hover {
+    background-color: darken($very-light-gray, 5%);
+  }
+
+  &__container_one,
+  &__container_two {
+    position: relative;
+  }
+
+  &__img_background {
+    height: 40rem;
+    width: 40rem;
+    opacity: 0.15;
+    position: absolute;
+    z-index: -10;
+
+    &__one {
+      top: -100%;
+      left: 8%;
+    }
+
+    &__two {
+      display: none;
+    }
+  }
+
+  @include tablet() {
     &__box {
       text-align: left;
       max-width: 70rem;
@@ -37,24 +64,39 @@
     }
 
     &__title {
-      padding: 0 4rem;
+      width: 70%;
+    }
+
+    &__container_two {
+      justify-self: end;
+    }
+
+    &__img_background {
+      &__two {
+        display: none;
+      }
     }
   }
 
-  @media (min-width: 1200px) {
+  @include desktop() {
     &__box {
       max-width: 120rem;
       justify-items: start;
     }
 
     &__title {
-      width: 40%;
+      font-size: 3.6rem;
+      width: 70%;
       padding: 0;
       margin: 0;
     }
 
-    button {
-      justify-self: end;
+    &__img_background {
+      &__two {
+        display: block;
+        top: -800%;
+        right: -300%;
+      }
     }
   }
 }

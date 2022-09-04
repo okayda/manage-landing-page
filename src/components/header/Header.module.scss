@@ -1,16 +1,21 @@
 @import "../../scss/variables";
+@import "../../scss/mixins";
 
 .header {
+  @include widthCenter(37.5rem);
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 3rem 2rem;
 
-  margin: 0 auto;
-  max-width: $mobile-wide;
-
   &__logo_link {
     height: 2rem;
+
+    img {
+      width: 15rem;
+      height: 2.4rem;
+    }
   }
 
   &__nav_container {
@@ -26,8 +31,35 @@
 
   &__nav_link:link,
   &__nav_link:visited {
+    position: relative;
     text-decoration: none;
-    color: #333;
+    color: $very-dark-blue;
+  }
+
+  &__nav_link::after {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    transition: all 0.3s;
+    transform: translateX(-50%);
+    height: 0.4rem;
+    width: 0;
+    background-color: $bright-red;
+
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__nav_link:hover,
+  &__nav_link:active {
+    color: lighten($very-dark-blue, 60%);
+  }
+
+  &__nav_link:hover::after {
+    width: 2.5rem;
+    visibility: visible;
+    opacity: 1;
   }
 
   &__menu {
@@ -41,7 +73,7 @@
     width: 2.4rem;
   }
 
-  @media (min-width: 700px) {
+  @include tablet() {
     max-width: 120rem;
 
     &__nav_container {
@@ -53,6 +85,12 @@
     }
 
     &__menu {
+      display: none;
+    }
+  }
+
+  @include s-desktop() {
+    &__button {
       display: none;
     }
   }

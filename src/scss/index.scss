@@ -5,6 +5,12 @@ html {
   font-size: 62.5%;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  height: 100%;
+}
+
 *,
 *::before,
 *::after {
@@ -16,8 +22,13 @@ html {
 body {
   font-family: "Be Vietnam Pro", sans-serif;
   background-color: $very-light-gray;
+  color: $very-dark-blue;
+}
+
+#main-content {
+  position: relative;
 }
 
 .active-nav {
-  overflow-y: hidden;
+  overflow-y: hidden !important;
 }

@@ -1,13 +1,13 @@
 @import "../../scss/variables";
+@import "../../scss/mixins";
 
 .testimonials {
-  max-width: $mobile-wide;
-  margin: 0 auto;
+  @include widthCenter(37.5rem);
 
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  gap: 4rem;
+  gap: 5.4rem;
   padding: 12rem 2rem 5rem;
 
   &__img {
@@ -28,19 +28,21 @@
   }
 
   &__name {
+    color: inherit;
     font-size: 1.7rem;
   }
 
   &__description {
+    color: $dark-grayish-blue;
     font-size: 1.5rem;
     line-height: 1.7;
   }
 
-  @media (min-width: 700px) {
+  @include tablet() {
     max-width: 75rem;
   }
 
-  @media (min-width: 1200px) {
+  @include desktop() {
     max-width: 110rem;
   }
 }

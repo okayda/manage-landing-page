@@ -1,6 +1,7 @@
 .steps {
   max-width: 37.5rem;
   margin: 0 auto;
+  position: relative;
   padding: 0 2rem 8rem;
   display: grid;
   grid-template-columns: 1fr;
@@ -15,6 +16,7 @@
   margin-bottom: 2.4rem;
 }
 .steps__description {
+  color: hsl(227deg, 12%, 61%);
   font-size: 1.5rem;
 }
 .steps__procedure_list {
@@ -54,7 +56,14 @@
   line-height: 1.6;
   font-size: 1.5rem;
 }
-@media (min-width: 700px) {
+.steps__img_background {
+  z-index: -10;
+  position: absolute;
+  height: 34rem;
+  top: -40%;
+  right: -49%;
+}
+@media only screen and (min-width: 43.75em) {
   .steps {
     max-width: 65rem;
     gap: 6rem;
@@ -76,8 +85,12 @@
   .steps__procedure_list li:nth-child(even) {
     justify-self: end;
   }
+  .steps__img_background {
+    top: -24%;
+    right: -32%;
+  }
 }
-@media (min-width: 1200px) {
+@media only screen and (min-width: 75em) {
   .steps {
     max-width: 120rem;
     grid-template-columns: 1fr 1fr;
@@ -110,5 +123,10 @@
   }
   .steps__procedure_list li:nth-child(even) {
     justify-self: auto;
+  }
+  .steps__img_background {
+    height: 80rem;
+    top: 40%;
+    left: -60%;
   }
 }

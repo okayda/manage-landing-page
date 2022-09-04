@@ -1,5 +1,6 @@
 import style from "./Steps.module.css";
 import ProcedureList from "./ProcedureList";
+import bg_img from "../../images/bg-tablet-pattern.svg";
 
 const Steps = function () {
   return (
@@ -21,6 +22,7 @@ const Steps = function () {
           steps__list_description={style.steps__list_description}
         />
       </div>
+      <img src={bg_img} className={style.steps__img_background} alt="" />
     </section>
   );
 };

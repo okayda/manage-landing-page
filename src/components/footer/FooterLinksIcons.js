@@ -1,37 +1,37 @@
 import {
-  FaFacebookF,
-  FaYoutube,
+  FaFacebookSquare,
+  FaYoutubeSquare,
   FaTwitterSquare,
-  FaPinterest,
-  FaInstagram,
+  FaPinterestSquare,
+  FaInstagramSquare,
 } from "react-icons/fa";
 
 const FooterLinksIcons = function (prop) {
   return (
-    <ul className={prop.footer__link_icon}>
+    <ul className={prop.footer__link_icons}>
       <li>
-        <a href={""}>
-          <FaFacebookF />
+        <a href={"#/"} className={prop.footer__link_icon}>
+          <FaFacebookSquare />
         </a>
       </li>
       <li>
-        <a href={""}>
-          <FaYoutube />
+        <a href={"#/"} className={prop.footer__link_icon}>
+          <FaYoutubeSquare />
         </a>
       </li>
       <li>
-        <a href={""}>
+        <a href={"#/"} className={prop.footer__link_icon}>
           <FaTwitterSquare />
         </a>
       </li>
       <li>
-        <a href={""}>
-          <FaPinterest />
+        <a href={"#/"} className={prop.footer__link_icon}>
+          <FaPinterestSquare />
         </a>
       </li>
       <li>
-        <a href={""}>
-          <FaInstagram />
+        <a href={"#/"} className={prop.footer__link_icon}>
+          <FaInstagramSquare />
         </a>
       </li>
     </ul>

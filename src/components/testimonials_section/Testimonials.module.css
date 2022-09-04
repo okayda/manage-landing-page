@@ -1,10 +1,10 @@
 .testimonials {
-  max-width: 375px;
+  max-width: 37.5rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  gap: 4rem;
+  gap: 5.4rem;
   padding: 12rem 2rem 5rem;
 }
 .testimonials__img {
@@ -22,18 +22,20 @@
   gap: 2.6rem;
 }
 .testimonials__name {
+  color: inherit;
   font-size: 1.7rem;
 }
 .testimonials__description {
+  color: hsl(227deg, 12%, 61%);
   font-size: 1.5rem;
   line-height: 1.7;
 }
-@media (min-width: 700px) {
+@media only screen and (min-width: 43.75em) {
   .testimonials {
     max-width: 75rem;
   }
 }
-@media (min-width: 1200px) {
+@media only screen and (min-width: 75em) {
   .testimonials {
     max-width: 110rem;
   }

@@ -1,9 +1,10 @@
 @import "../../scss/variables";
+@import "../../scss/mixins";
 
 .steps {
-  max-width: 37.5rem;
-  margin: 0 auto;
+  @include widthCenter(37.5rem);
 
+  position: relative;
   padding: 0 2rem 8rem;
   display: grid;
   grid-template-columns: 1fr;
@@ -19,6 +20,7 @@
   }
 
   &__description {
+    color: $dark-grayish-blue;
     font-size: 1.5rem;
   }
 
@@ -65,7 +67,15 @@
     font-size: 1.5rem;
   }
 
-  @media (min-width: 700px) {
+  &__img_background {
+    z-index: -10;
+    position: absolute;
+    height: 34rem;
+    top: -40%;
+    right: -49%;
+  }
+
+  @include tablet() {
     max-width: 65rem;
     gap: 6rem;
 
@@ -90,9 +100,14 @@
         justify-self: end;
       }
     }
+
+    &__img_background {
+      top: -24%;
+      right: -32%;
+    }
   }
 
-  @media (min-width: 1200px) {
+  @include desktop() {
     max-width: 120rem;
     grid-template-columns: 1fr 1fr;
 
@@ -133,6 +148,12 @@
       li:nth-child(even) {
         justify-self: auto;
       }
+    }
+
+    &__img_background {
+      height: 80rem;
+      top: 40%;
+      left: -60%;
     }
   }
 }

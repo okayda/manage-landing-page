@@ -1,48 +1,79 @@
 .cta {
   background-color: hsl(12deg, 88%, 59%);
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
 }
 .cta__box {
+  max-width: 33rem;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
   text-align: center;
-  max-width: 330px;
-  margin: 0 auto;
   padding: 6.4rem 2rem;
 }
 .cta__title {
   font-weight: 500;
   color: hsl(0deg, 0%, 98%);
-  padding: 0 5rem;
   font-size: 2.8rem;
   margin-bottom: 2rem;
 }
-.cta button {
+.cta__button {
   background-color: hsl(0deg, 0%, 98%);
   color: hsl(12deg, 88%, 59%);
 }
-@media (min-width: 700px) {
+.cta__button:hover {
+  background-color: #ededed;
+}
+.cta__container_one, .cta__container_two {
+  position: relative;
+}
+.cta__img_background {
+  height: 40rem;
+  width: 40rem;
+  opacity: 0.15;
+  position: absolute;
+  z-index: -10;
+}
+.cta__img_background__one {
+  top: -100%;
+  left: 8%;
+}
+.cta__img_background__two {
+  display: none;
+}
+@media only screen and (min-width: 43.75em) {
   .cta__box {
     text-align: left;
     max-width: 70rem;
     grid-template-columns: 2fr 1fr;
   }
   .cta__title {
-    padding: 0 4rem;
+    width: 70%;
+  }
+  .cta__container_two {
+    justify-self: end;
+  }
+  .cta__img_background__two {
+    display: none;
   }
 }
-@media (min-width: 1200px) {
+@media only screen and (min-width: 75em) {
   .cta__box {
     max-width: 120rem;
     justify-items: start;
   }
   .cta__title {
-    width: 40%;
+    font-size: 3.6rem;
+    width: 70%;
     padding: 0;
     margin: 0;
   }
-  .cta button {
-    justify-self: end;
+  .cta__img_background__two {
+    display: block;
+    top: -800%;
+    right: -300%;
   }
 }

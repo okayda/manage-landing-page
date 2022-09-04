@@ -1,14 +1,20 @@
-const LinkListTwo = function () {
+const LinkListTwo = function (prop) {
   return (
     <>
       <li>
-        <a herf={""}>Careers</a>
+        <a href={"#/"} className={prop.footer__link}>
+          Careers
+        </a>
       </li>
       <li>
-        <a herf={""}>Community</a>
+        <a href={"#/"} className={prop.footer__link}>
+          Community
+        </a>
       </li>
       <li>
-        <a herf={""}>Privacy Policy</a>
+        <a href={"#/"} className={prop.footer__link}>
+          Privacy Policy
+        </a>
       </li>
     </>
   );

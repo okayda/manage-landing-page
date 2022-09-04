@@ -1,11 +1,11 @@
 @import "../../scss/variables";
+@import "../../scss/mixins";
 
 .footer {
   background-color: $very-dark-blue;
 
   &__box {
-    max-width: $mobile-wide;
-    margin: 0 auto;
+    @include widthCenter(37.5rem);
 
     display: grid;
     grid-template-columns: 1fr;
@@ -49,7 +49,7 @@
   }
 
   &__link_list,
-  &__link_icon {
+  &__link_icons {
     list-style: none;
   }
 
@@ -59,7 +59,7 @@
     gap: 1.4rem;
   }
 
-  &__link_icon {
+  &__link_icons {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -67,15 +67,34 @@
     line-height: 1;
   }
 
-  &__link_list a,
-  &__link_icon a {
+  &__link_icon:link,
+  &__link_icon:visited {
     color: $very-light-gray;
+  }
+
+  &__link:link,
+  &__link:visited {
+    color: $dark-grayish-blue;
+    text-decoration: none;
+  }
+
+  &__link_icon:hover,
+  &__link_icon:active,
+  &__link:hover,
+  &__link:active {
+    transition: all 0.4s;
+    color: $bright-red;
   }
 
   &__logo {
     align-self: end;
     filter: $svg-very-light-gray;
-    height: 24px;
+    height: 2.4rem;
+
+    img {
+      width: 15rem;
+      height: 2.4rem;
+    }
   }
 
   &__copyright {
@@ -83,7 +102,7 @@
     color: $dark-grayish-blue;
   }
 
-  @media (max-width: 350px) {
+  @include s-mobile() {
     &__form_container {
       justify-self: stretch;
     }
@@ -103,7 +122,7 @@
     }
   }
 
-  @media (min-width: 700px) {
+  @include tablet() {
     &__box {
       max-width: 70rem;
       grid-template-columns: 1fr 2fr;
@@ -120,7 +139,7 @@
       grid-row: 2 /3;
     }
 
-    &__link_icon {
+    &__link_icons {
       justify-content: start;
       gap: 3rem;
     }
@@ -130,13 +149,14 @@
     }
   }
 
-  @media (min-width: 1200px) {
+  @include desktop() {
     &__box {
       max-width: 120rem;
       grid-template-columns: 1fr 1fr 1fr;
     }
 
     &__form_container {
+      justify-self: end;
       grid-column: 3 / -1;
     }
 
@@ -155,6 +175,7 @@
     }
 
     &__copyright {
+      justify-self: end;
       grid-column: 3 / -1;
     }
   }

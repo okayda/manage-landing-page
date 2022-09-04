@@ -1,11 +1,17 @@
 @import "../../scss/variables";
 
 .button {
+  cursor: pointer;
   font-size: 1.5rem;
+  transition: all 0.3s;
   background-color: $bright-red;
-  box-shadow: 0 0.8rem 0.8rem rgba($bright-red, 0.5);
+  box-shadow: 0 0.5rem 0.8rem rgba($bright-red, 0.5);
   padding: 1.4rem 2.2rem;
   border: none;
   color: $very-light-gray;
   border-radius: 100px;
+}
+
+.button:hover {
+  background-color: lighten($bright-red, 7%);
 }

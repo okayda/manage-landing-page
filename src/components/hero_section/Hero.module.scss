@@ -1,15 +1,16 @@
 @import "../../scss/variables";
+@import "../../scss/mixins";
 
 .hero {
+  @include widthCenter(37.5rem);
+
   height: 80vh;
+  padding: 0 2rem;
   padding-bottom: 20vh;
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
   gap: 1.4rem;
-
-  margin: 0 auto;
-  max-width: $mobile-wide;
 
   &__content {
     text-align: center;
@@ -28,16 +29,34 @@
     margin-bottom: 2.4rem;
   }
 
-  &__img {
+  &__img_container {
     order: 1;
+    text-align: center;
+    position: relative;
     width: 100%;
     margin: 0 auto;
   }
 
-  @media (min-width: 700px) {
+  &__img {
+    width: 100%;
+  }
+
+  &__img_background {
+    z-index: -10;
+    position: absolute;
+    top: -85%;
+    right: -65%;
+    width: 55rem;
+    height: 55rem;
+  }
+
+  @include tablet() {
     max-width: 40rem;
     gap: 2rem;
+    padding-bottom: 0;
+
     &__content {
+      align-self: start;
       padding: 0;
     }
 
@@ -46,17 +65,28 @@
     }
 
     &__img {
+      height: 34rem;
       max-width: 37.5rem;
+    }
+
+    &__img_background {
+      height: 60rem;
+      top: -90%;
+      right: -70%;
+      width: 60rem;
+      height: 60rem;
     }
   }
 
-  @media (min-width: 1200px) {
+  @include desktop() {
     max-width: 120rem;
     grid-template-columns: 1fr 1fr;
+    padding-bottom: 20vh;
 
     &__content {
-      text-align: left;
       order: 1;
+      align-self: center;
+      text-align: left;
     }
 
     &__title {
@@ -65,14 +95,27 @@
     }
 
     &__description {
+      color: $dark-grayish-blue;
       width: 60%;
     }
 
-    &__img {
-      max-width: 50rem;
-      justify-self: end;
-      margin: 0;
+    &__img_container {
       order: 2;
+      justify-self: end;
+      width: auto;
+      margin: 0;
+    }
+
+    &__img {
+      height: 45.2rem;
+      max-width: 50rem;
+    }
+
+    &__img_background {
+      top: -120%;
+      right: -100%;
+      width: 96rem;
+      height: 96rem;
     }
   }
 }

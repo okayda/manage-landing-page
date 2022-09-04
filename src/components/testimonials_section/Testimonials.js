@@ -13,7 +13,7 @@ import Button from "../Button/Button";
 
 const Testimonials = function () {
   const [width, setWidth] = useState(window.innerWidth);
-  console.log(width);
+
   React.useEffect(() => {
     window.addEventListener("resize", () => {
       setWidth(window.innerWidth);

@@ -5,6 +5,7 @@ import style from "./Header.module.css";
 import logo from "../../images/logo.svg";
 import menu from "../../images/icon-hamburger.svg";
 import close from "../../images/icon-close.svg";
+import Button from "../Button/Button";
 
 import Overlay from "../overlay/Overlay";
 import NavMobile from "../nav_mobile/NavMobile";
@@ -57,7 +58,7 @@ const Nav = function () {
 
       {activeNav &&
         ReactDOM.createPortal(
-          <Overlay />,
+          <Overlay onClick={menuNavMobile} />,
           document.querySelector(".overlay-container")
         )}
       {activeNav &&
@@ -65,6 +66,9 @@ const Nav = function () {
           <NavMobile />,
           document.querySelector(".nav_mobile-container")
         )}
+
+      <Button className={style.header__button}>Get Started</Button>
+      {}
     </div>
   );
 };

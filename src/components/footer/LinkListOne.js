@@ -1,17 +1,25 @@
-const LinkListOne = function () {
+const LinkListOne = function (prop) {
   return (
     <>
       <li>
-        <a herf={"#"}>Home</a>
+        <a href={"#/"} className={prop.footer__link}>
+          Home
+        </a>
       </li>
       <li>
-        <a herf={"#"}>Pricing</a>
+        <a href={"#/"} className={prop.footer__link}>
+          Pricing
+        </a>
       </li>
       <li>
-        <a herf={"#"}>Products</a>
+        <a href={"#/"} className={prop.footer__link}>
+          Products
+        </a>
       </li>
       <li>
-        <a herf={"#"}>About Us</a>
+        <a href={"#/"} className={prop.footer__link}>
+          About Us
+        </a>
       </li>
     </>
   );

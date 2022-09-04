@@ -1,7 +1,11 @@
 import "./Overlay.css";
 
-const Overlay = function () {
-  return <div className="overlay">&nbsp;</div>;
+const Overlay = function (prop) {
+  return (
+    <div className="overlay" onClick={prop.onClick}>
+      &nbsp;
+    </div>
+  );
 };
 
 export default Overlay;
