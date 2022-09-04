@@ -17,8 +17,8 @@ Users should be able to:
 
 ## Links
 
-- [Solution URL]("")
-- [Live Site URL]("")
+- [Solution URL](https://github.com/okayda/react-manage-landing-page.git)
+- [Live Site URL](https://jhon-okayda-manage-landing-page.netlify.app/)
 
 ## Built with
 
