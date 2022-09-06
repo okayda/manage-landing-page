@@ -4,6 +4,7 @@
 .hero {
   @include widthCenter(37.5rem);
 
+  box-sizing: content-box;
   height: 80vh;
   padding: 0 2rem;
   padding-bottom: 20vh;
@@ -79,7 +80,7 @@
   }
 
   @include desktop() {
-    max-width: 120rem;
+    max-width: 116rem;
     grid-template-columns: 1fr 1fr;
     padding-bottom: 20vh;
 
@@ -90,7 +91,7 @@
     }
 
     &__title {
-      font-size: 4.6rem;
+      font-size: 5.6rem;
       width: 90%;
     }
 
@@ -107,8 +108,8 @@
     }
 
     &__img {
-      height: 45.2rem;
-      max-width: 50rem;
+      height: 50rem;
+      max-width: 53rem;
     }
 
     &__img_background {
